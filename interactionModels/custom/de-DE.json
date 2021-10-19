@@ -1,0 +1,202 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "kühlschrank manager",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "Danke"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AddToFridgeIntent",
+          "slots": [
+            {
+              "name": "FoodItem",
+              "type": "AMAZON.Food"
+            },
+            {
+              "name": "Number",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "FridgeLocation",
+              "type": "FridgeLocation"
+            },
+            {
+              "name": "FoodUnit",
+              "type": "FoodUnit"
+            }
+          ],
+          "samples": [
+            "{Number} {FoodItem}",
+            "lege {Number} {FoodUnit} {FoodItem} in {FridgeLocation}",
+            "{Number} {FoodUnit} {FoodItem} in {FridgeLocation}",
+            "Ich habe {Number} {FoodUnit} {FoodItem} gekauft",
+            "Ich lege {Number} {FoodUnit} {FoodItem} in {FridgeLocation}"
+          ]
+        },
+        {
+          "name": "TakeOutFromFridgeIntent",
+          "slots": [
+            {
+              "name": "FoodItem",
+              "type": "AMAZON.Food"
+            },
+            {
+              "name": "Number",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "FoodUnit",
+              "type": "FoodUnit"
+            },
+            {
+              "name": "FridgeLocation",
+              "type": "FridgeLocation"
+            }
+          ],
+          "samples": [
+            "Nimm {Number} {FoodUnit}  {FoodItem} aus {FridgeLocation}",
+            "Ich nehme {Number} {FoodUnit}  {FoodItem} aus {FridgeLocation}",
+            "Ich brauche {Number} {FoodUnit} {FoodItem} aus {FridgeLocation}"
+          ]
+        },
+        {
+          "name": "WhatIsInMyFridgeIntent",
+          "slots": [
+            {
+              "name": "FoodItem",
+              "type": "AMAZON.Food"
+            },
+            {
+              "name": "Number",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "FoodUnit",
+              "type": "FoodUnit"
+            }
+          ],
+          "samples": [
+            "was im Kühlschrank ist",
+            "Was hast Du alles",
+            "Was ist im Kühlschrank",
+            "Was ist in meinem Kühlschrank",
+            "Haben wir noch  {Number} {FoodUnit} {FoodItem}",
+            "Gibt es noch {Number} {FoodUnit} {FoodItem}",
+            "Wieviele {Number} {FoodUnit} {FoodItem} haben wir noch"
+          ]
+        },
+        {
+          "name": "EmptyFridgeIntent",
+          "slots": [],
+          "samples": [
+            "Mache alles leer"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "kühlschrank"
+              }
+            },
+            {
+              "name": {
+                "value": "Gefrierfach"
+              }
+            },
+            {
+              "name": {
+                "value": "unteres Fach"
+              }
+            },
+            {
+              "name": {
+                "value": "mittleres Fach"
+              }
+            },
+            {
+              "name": {
+                "value": "oberstes Fach"
+              }
+            },
+            {
+              "name": {
+                "value": "Tür"
+              }
+            },
+            {
+              "name": {
+                "value": "Gemüseschublade"
+              }
+            }
+          ],
+          "name": "FridgeLocation"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Liter"
+              }
+            },
+            {
+              "name": {
+                "value": "Schachtel"
+              }
+            },
+            {
+              "name": {
+                "value": "Schluck"
+              }
+            },
+            {
+              "name": {
+                "value": "Bissen"
+              }
+            },
+            {
+              "name": {
+                "value": "Kilo"
+              }
+            },
+            {
+              "name": {
+                "value": "Gramm"
+              }
+            },
+            {
+              "name": {
+                "value": "Stück"
+              }
+            },
+            {
+              "name": {
+                "value": "Packung"
+              }
+            }
+          ],
+          "name": "FoodUnit"
+        }
+      ]
+    }
+  },
+  "version": "3"
+}
